@@ -17,6 +17,6 @@ const IsmutedDevice = NativeModules.IsmutedDevice
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return IsmutedDevice.multiply(a, b);
+export function check(a: number, b: number): Promise<number> {
+  return IsmutedDevice.check(a, b);
 }
