@@ -3,20 +3,21 @@ import { StyleSheet, View, Text } from 'react-native';
 import { check } from 'react-native-ismuted-device';
 
 export default function App() {
-  const [result, setResult] = useState(0);
+  const [result, setResult] = useState('');
 
   useEffect(() => {
     handleCheck();
   }, []);
 
   const handleCheck = () => {
-    const test = check(3, 7);
-    setResult(test);
+    check().then((res) => {
+      setResult(res);
+    });
   };
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>Muted: {!!result}</Text>
     </View>
   );
 }
