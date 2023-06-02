@@ -37,7 +37,7 @@ RCT_REMAP_METHOD(check,
 
 -(void)silenced {
 #if TARGET_IPHONE_SIMULATOR
-  reject(@"isMuted", @"The simulator currently doesn't support react-native-is-muted.", [NSError errorWithDomain:@"SimulatorNotSupported" code:0 userInfo:@{}]);
+  self.rejectBlock(@FALSE);
 #endif
   
   self.muteChecker = [[MuteChecker alloc] initWithCompletionBlk:^(BOOL muted) {
