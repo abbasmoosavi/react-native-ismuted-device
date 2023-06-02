@@ -37,7 +37,7 @@ RCT_REMAP_METHOD(check,
 
 -(void)silenced {
 #if TARGET_IPHONE_SIMULATOR
-  self.rejectBlock(@FALSE);
+  self.rejectBlock(@FALSE, @"isMuted", @"Error occured when checking is muted.");
 #endif
   
   self.muteChecker = [[MuteChecker alloc] initWithCompletionBlk:^(BOOL muted) {
