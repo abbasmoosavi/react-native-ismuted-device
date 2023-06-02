@@ -16,7 +16,7 @@ import { check } from 'react-native-ismuted-device';
 
 // ...
 
-const result = await check(3, 7);
+const result = await check();
 ```
 
 ## Contributing
