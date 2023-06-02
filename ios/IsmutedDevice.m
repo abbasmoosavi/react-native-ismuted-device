@@ -54,3 +54,5 @@ RCT_REMAP_METHOD(check,
       NSLocalizedFailureReasonErrorKey: (e.reason ?: @"???") }]);
   }
 }
+
+@end
