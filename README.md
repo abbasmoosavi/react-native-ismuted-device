@@ -1,6 +1,7 @@
 # react-native-ismuted-device
 
 This is a module for check silent device (android/iOS) is enabled or not.
+Work only for iOS and for android will add coming soon
 
 ## Installation
 
@@ -11,11 +12,11 @@ npm install react-native-ismuted-device
 ## Usage
 
 ```js
-import { multiply } from 'react-native-ismuted-device';
+import { check } from 'react-native-ismuted-device';
 
 // ...
 
-const result = await multiply(3, 7);
+const result = await check(3, 7);
 ```
 
 ## Contributing

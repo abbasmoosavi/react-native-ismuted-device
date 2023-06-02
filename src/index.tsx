@@ -1,22 +1,23 @@
-import { NativeModules, Platform } from 'react-native';
+// import { NativeModules, Platform } from 'react-native';
 
-const LINKING_ERROR =
-  `The package 'react-native-ismuted-device' doesn't seem to be linked. Make sure: \n\n` +
-  Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
-  '- You rebuilt the app after installing the package\n' +
-  '- You are not using Expo Go\n';
+// const LINKING_ERROR =
+//   `The package 'react-native-ismuted-device' doesn't seem to be linked. Make sure: \n\n` +
+//   Platform.select({ ios: "- You have run 'pod install'\n", default: '' }) +
+//   '- You rebuilt the app after installing the package\n' +
+//   '- You are not using Expo Go\n';
 
-const IsmutedDevice = NativeModules.IsmutedDevice
-  ? NativeModules.IsmutedDevice
-  : new Proxy(
-      {},
-      {
-        get() {
-          throw new Error(LINKING_ERROR);
-        },
-      }
-    );
+// const IsmutedDevice = NativeModules.IsmutedDevice
+//   ? NativeModules.IsmutedDevice
+//   : new Proxy(
+//     {},
+//     {
+//       get() {
+//         throw new Error(LINKING_ERROR);
+//       },
+//     }
+//   );
 
-export function check(a: number, b: number): Promise<number> {
-  return IsmutedDevice.check(a, b);
-}
+export const check = (a: number, b: number) => {
+  return a + b;
+  // return IsmutedDevice.check(a, b);
+};
